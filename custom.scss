@@ -1,0 +1,30 @@
+/*-- scss:defaults --*/
+
+@import url('https://fonts.googleapis.com/css2?family=Source+Sans+3:wght@400;600&family=Lora:wght@600&display=swap');
+
+$font-family-sans-serif: "Source Sans 3", -apple-system, "Segoe UI", sans-serif;
+$headings-font-family: "Lora", Georgia, serif;
+
+$body-bg:        #FBFAF7;
+$body-color:     #1F2933;
+$link-color:     #9B2226;
+$headings-color: #0B5563;
+$navbar-bg:      #0B5563;
+$navbar-fg:      #FBFAF7;
+
+/*-- scss:rules --*/
+
+h1, h2, h3 {
+  letter-spacing: -0.01em;
+}
+
+blockquote {
+  border-left: 4px solid #0B5563;
+  padding-left: 1rem;
+  color: #3E4C59;
+}
+
+figcaption {
+  font-size: 0.9rem;
+  color: #3E4C59;
+}

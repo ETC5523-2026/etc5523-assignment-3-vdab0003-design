@@ -1,17 +1,18 @@
 project:
   type: website
+  output-dir: docs
 
 website:
-  title: "blog-template"
+  title: "Vibhor Dabas"
+  description: "Data stories and notes from a Master of Business Analytics student"
   navbar:
     right:
       - about.qmd
       - icon: github
-        href: https://github.com/etc5523-2022
+        href: https://github.com/vdab0003-design
+        aria-label: GitHub
 format:
   html:
-    theme: cosmo
+    theme: [cosmo, custom.scss]
     css: styles.css
-
-
-
+    toc: true

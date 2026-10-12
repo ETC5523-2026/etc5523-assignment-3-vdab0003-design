@@ -6,10 +6,11 @@
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
-<meta name="author" content="Emi Tanaka">
-<meta name="dcterms.date" content="2022-07-18">
+<meta name="author" content="Vibhor Dabas">
+<meta name="dcterms.date" content="2026-10-12">
+<meta name="description" content="Why counting infections tells you less than you think, and what happens when a country sends a lot of people to hospital.">
 
-<title>Welcome To My Blog Template – Vibhor Dabas</title>
+<title>Germany’s hospitals are among the safest in Europe. Its patients still lose more years of healthy life. – Vibhor Dabas</title>
 <style>
 /* Default styles provided by pandoc.
 ** See https://pandoc.org/MANUAL.html#variables-for-html for config info.
@@ -25,7 +26,26 @@ ul.task-list li input[type="checkbox"] {
   margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
   vertical-align: middle;
 }
-</style>
+/* CSS for citations */
+div.csl-bib-body { }
+div.csl-entry {
+  clear: both;
+}
+.hanging-indent div.csl-entry {
+  margin-left:2em;
+  text-indent:-2em;
+}
+div.csl-left-margin {
+  min-width:2em;
+  float:left;
+}
+div.csl-right-inline {
+  margin-left:2em;
+  padding-left:1em;
+}
+div.csl-indent {
+  margin-left: 2em;
+}</style>
 
 
 <script src="../../site_libs/quarto-nav/quarto-nav.js"></script>
@@ -35,6 +55,7 @@ ul.task-list li input[type="checkbox"] {
 <script src="../../site_libs/quarto-search/fuse.min.js"></script>
 <script src="../../site_libs/quarto-search/quarto-search.js"></script>
 <meta name="quarto:offset" content="../../">
+<link href="../../profile.jpg" rel="icon" type="image/jpeg">
 <script src="../../site_libs/quarto-html/quarto.js" type="module"></script>
 <script src="../../site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
 <script src="../../site_libs/quarto-html/popper.min.js"></script>
@@ -93,11 +114,17 @@ ul.task-list li input[type="checkbox"] {
   <span class="navbar-toggler-icon"></span>
 </button>
           <div class="collapse navbar-collapse" id="navbarCollapse">
-            <ul class="navbar-nav navbar-nav-scroll ms-auto">
+            <ul class="navbar-nav navbar-nav-scroll me-auto">
+  <li class="nav-item">
+    <a class="nav-link" href="../../index.html"> 
+<span class="menu-text">Blog</span></a>
+  </li>  
   <li class="nav-item">
     <a class="nav-link" href="../../about.html"> 
 <span class="menu-text">About</span></a>
   </li>  
+</ul>
+            <ul class="navbar-nav navbar-nav-scroll ms-auto">
   <li class="nav-item compact">
     <a class="nav-link" href="https://github.com/vdab0003-design"> <i class="bi bi-github" role="img" aria-label="GitHub">
 </i> 
@@ -114,9 +141,15 @@ ul.task-list li input[type="checkbox"] {
 <header id="title-block-header" class="quarto-title-block default page-columns page-full">
   <div class="quarto-title-banner page-columns page-full">
     <div class="quarto-title column-body">
-      <h1 class="title">Welcome To My Blog Template</h1>
-                                <div class="quarto-categories">
-                <div class="quarto-category">news</div>
+      <h1 class="title">Germany’s hospitals are among the safest in Europe. Its patients still lose more years of healthy life.</h1>
+                  <div>
+        <div class="description">
+          Why counting infections tells you less than you think, and what happens when a country sends a lot of people to hospital.
+        </div>
+      </div>
+                          <div class="quarto-categories">
+                <div class="quarto-category">health</div>
+                <div class="quarto-category">data</div>
               </div>
                   </div>
   </div>
@@ -127,14 +160,14 @@ ul.task-list li input[type="checkbox"] {
       <div>
       <div class="quarto-title-meta-heading">Author</div>
       <div class="quarto-title-meta-contents">
-               <p>Emi Tanaka </p>
+               <p>Vibhor Dabas </p>
             </div>
     </div>
       
       <div>
       <div class="quarto-title-meta-heading">Published</div>
       <div class="quarto-title-meta-contents">
-        <p class="date">July 18, 2022</p>
+        <p class="date">October 12, 2026</p>
       </div>
     </div>
     
@@ -145,8 +178,17 @@ ul.task-list li input[type="checkbox"] {
   </header><div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
 <!-- sidebar -->
 <!-- margin-sidebar -->
-    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar zindex-bottom">
-        
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+        <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">On this page</h2>
+   
+  <ul>
+  <li><a href="#the-problem-with-counting-infections" id="toc-the-problem-with-counting-infections" class="nav-link active" data-scroll-target="#the-problem-with-counting-infections">The problem with counting infections</a></li>
+  <li><a href="#what-the-researchers-found" id="toc-what-the-researchers-found" class="nav-link" data-scroll-target="#what-the-researchers-found">What the researchers found</a></li>
+  <li><a href="#why-it-matters" id="toc-why-it-matters" class="nav-link" data-scroll-target="#why-it-matters">Why it matters</a></li>
+  <li><a href="#reference" id="toc-reference" class="nav-link" data-scroll-target="#reference">Reference</a></li>
+  </ul>
+</nav>
     </div>
 <!-- main -->
 <main class="content quarto-banner-title-block" id="quarto-document-content">
@@ -155,12 +197,95 @@ ul.task-list li input[type="checkbox"] {
 
 
 
-<p>This is the first post in a Quarto blog. Welcome!</p>
-<p><img src="thumbnail.jpg" class="img-fluid"></p>
+<p>Nobody expects to come home from hospital with an illness they did not arrive with. Yet every year, hundreds of thousands of people across Europe catch an infection during treatment, from a catheter, a surgical wound, a drip or a ventilator. Most recover. Some do not.</p>
+<p>If you wanted to know which country handled this problem best, you would probably count infections per patient and rank the countries. That sounds reasonable, and it gives you the wrong answer. A study of German hospitals shows why.</p>
+<section id="the-problem-with-counting-infections" class="level2">
+<h2 class="anchored" data-anchor-id="the-problem-with-counting-infections">The problem with counting infections</h2>
+<p>German hospitals catch fewer infections per patient than the European average. By that measure they are doing well. But when researchers counted how much damage those infections did across the whole German population, Germany came out worse than Europe, not better.</p>
+<p>Both of those statements are true at the same time, and the gap between them is the interesting part.</p>
+<p>The reason the two measures disagree is that they are answering different questions. Infections per patient asks how safe a hospital is once you are in it. Damage across the population asks how much harm the whole system causes to the country it serves. A hospital system can be good at the first and still do badly at the second, if it admits enough people.</p>
+<p>There is a second counting problem underneath this one. Treating every infection as one case assumes they are all equally serious, and they are not. Some infections keep you in hospital an extra week. Others kill you. To compare them fairly, the researchers measured harm in lost years of healthy life, which combines the years lost when someone dies early with the years spent living in poor health. One lost year is one unit, whether it comes from an early death or a long illness.</p>
+</section>
+<section id="what-the-researchers-found" class="level2">
+<h2 class="anchored" data-anchor-id="what-the-researchers-found">What the researchers found</h2>
+<p>The data come from a one-day survey run across European hospitals in 2011 and 2012. On a single day, every patient in each participating hospital was checked for an active infection. In Germany that covered 46 randomly chosen hospitals and 9,626 patients. The researchers then scaled those figures up to the whole country using national hospital admission numbers <span class="citation" data-cites="zacher2019">(<a href="#ref-zacher2019" role="doc-biblioref">Zacher et al. 2019</a>)</span>.</p>
+<p><a href="#tbl-compare" class="quarto-xref">Table&nbsp;1</a> shows the result. Germany is treated more safely per patient, but ends up ahead of Europe on every population measure.</p>
+<div class="cell">
+<div id="tbl-compare" class="cell quarto-float quarto-figure quarto-figure-center anchored">
+<figure class="quarto-float quarto-float-tbl figure">
+<figcaption class="quarto-float-caption-top quarto-float-caption quarto-float-tbl" id="tbl-compare-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Table&nbsp;1: Germany ends up with more infections, more deaths and more lost health per head of population than the European average, despite treating each patient more safely. Figures are estimates for 2011, rounded. Source: Zacher et al.&nbsp;(2019).
+</figcaption>
+<div aria-describedby="tbl-compare-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<div class="cell-output-display">
+<table class="cell caption-top table table-sm table-striped small">
+<thead>
+<tr class="header">
+<th style="text-align: left;">Per 100,000 people, each year</th>
+<th style="text-align: center;">Germany</th>
+<th style="text-align: center;">European average</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: left;">Infections caught in hospital</td>
+<td style="text-align: center;">592</td>
+<td style="text-align: center;">468</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">Deaths caused by those infections</td>
+<td style="text-align: center;">20</td>
+<td style="text-align: center;">15</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">Years of healthy life lost</td>
+<td style="text-align: center;">308</td>
+<td style="text-align: center;">290</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+</figure>
+</div>
+</div>
+<p>The explanation is volume. Germany has more hospital beds than any other country in Europe, and admits more people than almost any other wealthy country. A small risk, spread across a very large number of admissions, adds up. That makes the number of unnecessary hospital stays an infection problem in its own right, not just a budget problem. It is also the first half of the answer to the question we started with: German hospitals are not doing worse per patient, they are simply treating far more patients.</p>
+<p>The second finding is about which infections deserve attention. The most common infection is not the most dangerous one, as <a href="#fig-risk" class="quarto-xref">Figure&nbsp;1</a> shows.</p>
+<div class="cell">
+<div class="cell-output-display">
+<div id="fig-risk" class="quarto-float quarto-figure quarto-figure-center anchored">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-risk-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img src="index_files/figure-html/fig-risk-1.png" class="img-fluid figure-img" width="672">
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-risk-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figure&nbsp;1: Bloodstream infections are the rarest of the five but kill roughly one patient in seven, while urinary tract infections are the most common and the least deadly. Calculated from estimated German cases and deaths in 2011. Source: Zacher et al.&nbsp;(2019).
+</figcaption>
+</figure>
+</div>
+</div>
+</div>
+<p>Urinary tract infections account for nearly half of all cases, but they are rarely fatal on their own. Bloodstream infections are the rarest of the five, and they kill about one patient in seven. A prevention programme that chased the biggest case numbers would spend most of its effort on the least dangerous infection.</p>
+<p>One caution is worth keeping in mind. These are estimates built from a single day’s snapshot, not a count of every infection, and the researchers are careful to say so. The gap between Germany and Europe in lost years of healthy life is small enough that it could, in principle, be no gap at all. The difference in infection rates is the part the evidence supports most strongly.</p>
+</section>
+<section id="why-it-matters" class="level2">
+<h2 class="anchored" data-anchor-id="why-it-matters">Why it matters</h2>
+<p>The question this study started with was which hospital system handles infections best, and the honest answer is that it depends entirely on what you count. Measured per patient, Germany looks good. Measured per citizen, it does not. Neither number is wrong, and reading only one of them produces a confident conclusion in the wrong direction.</p>
+<p>The same trap is waiting in any statistic that comes with a denominator, whether it is crime per neighbourhood, accidents per driver or deaths per case. Before accepting a ranking, it is worth asking what sits underneath the line, and whether a different choice would reverse the order.</p>
+<p>For hospitals, the practical message is that infection control is not the only lever. Keeping people out of hospital when they do not need to be there protects them too, because the safest infection is the one that never had the chance to happen.</p>
+</section>
+<section id="reference" class="level2">
 
 
 
-</main> <!-- /main -->
+
+</section>
+
+<div id="quarto-appendix" class="default"><section class="quarto-appendix-contents" role="doc-bibliography" id="quarto-bibliography"><h2 class="anchored quarto-appendix-heading">Reference</h2><div id="refs" class="references csl-bib-body hanging-indent" role="list">
+<div id="ref-zacher2019" class="csl-entry" role="listitem">
+Zacher, Benedikt, Sebastian Haller, Niklas Willrich, et al. 2019. <span>“Application of a New Methodology and <span>R</span> Package Reveals a High Burden of Healthcare-Associated Infections (<span>HAI</span>) in <span>Germany</span> Compared to the Average in the <span>European Union/European Economic Area</span>, 2011 to 2012.”</span> <em>Eurosurveillance</em> 24 (46): 1900135. <a href="https://doi.org/10.2807/1560-7917.ES.2019.24.46.1900135">https://doi.org/10.2807/1560-7917.ES.2019.24.46.1900135</a>.
+</div>
+</div></section></div></main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">
   window.document.addEventListener("DOMContentLoaded", function (event) {
     const icon = "";

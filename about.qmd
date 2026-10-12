@@ -1,13 +1,22 @@
 ---
 title: "About"
-image: profile.jpg
+image: profile12.jpg
 about:
   template: jolla
   links:
     - icon: github
-      text: Github
-      href: https://github.com/etc5523-2022
-
+      text: GitHub
+      href: https://github.com/vdab0003-design
+    - icon: linkedin
+      text: LinkedIn
+      href: https://www.linkedin.com/in/vibhor-dabas-ba0700260
+    - icon: envelope
+      text: Email
+      href: mailto:dabasvibhor@gmail.com
 ---
 
-This is a blog template for the ETC5523 Communicating with Data assessment at Monash University.
+I am a Master of Business Analytics student at Monash University in Melbourne, and I came to data from a commerce background after finishing a Bachelor of Commerce at the University of Delhi.
+
+What interests me most is the point where analysis meets a decision. A result is only useful once someone who did not build it can understand what it means and act on it, and that translation is harder than it looks. This blog is where I practise it.
+
+I work mainly in R, and I am currently learning how to turn analysis into writing, visualisations and web pages that people outside the room can follow.

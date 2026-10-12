@@ -5,14 +5,21 @@ project:
 website:
   title: "Vibhor Dabas"
   description: "Data stories and notes from a Master of Business Analytics student"
+  favicon: profile.jpg
   navbar:
+    left:
+      - href: index.qmd
+        text: Blog
+      - href: about.qmd
+        text: About
     right:
-      - about.qmd
       - icon: github
         href: https://github.com/vdab0003-design
         aria-label: GitHub
+
 format:
   html:
     theme: [cosmo, custom.scss]
     css: styles.css
     toc: true
+

@@ -5,8 +5,9 @@ project:
 website:
   title: "Vibhor Dabas"
   description: "Data stories and notes from a Master of Business Analytics student"
-  favicon: profile12.jpg
+  favicon: favicon.png
   navbar:
+    logo: favicon.png
     left:
       - href: index.qmd
         text: Blog
@@ -22,4 +23,3 @@ format:
     theme: [cosmo, custom.scss]
     css: styles.css
     toc: true
-

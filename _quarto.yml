@@ -5,7 +5,7 @@ project:
 website:
   title: "Vibhor Dabas"
   description: "Data stories and notes from a Master of Business Analytics student"
-  favicon: profile.jpg
+  favicon: profile12.jpg
   navbar:
     left:
       - href: index.qmd

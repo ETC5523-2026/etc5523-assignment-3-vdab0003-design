@@ -1,5 +1,6 @@
 ---
-title: "ETC5523 Blog Assessment"
+title: "Behind the statistic"
+subtitle: "How numbers get reported, and what they leave out"
 listing:
   contents: posts
   sort: "date desc"
@@ -10,5 +11,3 @@ listing:
 page-layout: full
 title-block-banner: true
 ---
-
-

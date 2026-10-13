@@ -1,0 +1,99 @@
+---
+title: "Germany's hospitals are among the safest in Europe. Its patients still lose more years of healthy life."
+description: "Why counting infections tells you less than you think, and what happens when a country sends a lot of people to hospital."
+author: "Vibhor Dabas"
+date: "2026-10-12"
+categories: [health, data]
+bibliography: references.bib
+---
+
+```{r}
+#| echo: false
+#| message: false
+library(ggplot2)
+```
+
+Nobody expects to come home from hospital with an illness they did not arrive with. Yet every year, hundreds of thousands of people across Europe catch an infection during treatment, from a catheter, a surgical wound, a drip or a ventilator. Most recover. Some do not.
+
+If you wanted to know which country handled this problem best, you would probably count infections per patient and rank the countries. That sounds reasonable, and it gives you the wrong answer. A study of German hospitals shows why.
+
+## The problem with counting infections
+
+German hospitals catch fewer infections per patient than the European average. By that measure they are doing well. But when researchers counted how much damage those infections did across the whole German population, Germany came out worse than Europe, not better.
+
+Both of those statements are true at the same time, and the gap between them is the interesting part.
+
+The reason the two measures disagree is that they are answering different questions. Infections per patient asks how safe a hospital is once you are in it. Damage across the population asks how much harm the whole system causes to the country it serves. A hospital system can be good at the first and still do badly at the second, if it admits enough people.
+
+There is a second counting problem underneath this one. Treating every infection as one case assumes they are all equally serious, and they are not. Some infections keep you in hospital an extra week. Others kill you. To compare them fairly, the researchers measured harm in lost years of healthy life, which combines the years lost when someone dies early with the years spent living in poor health. One lost year is one unit, whether it comes from an early death or a long illness.
+
+## What the researchers found
+
+The data come from a survey run by the European Centre for Disease Prevention and Control across hospitals in 29 European countries in 2011 and 2012. On a single day, every patient in each participating hospital was checked for an active infection. In Germany that covered 46 randomly chosen hospitals and 9,626 patients. The researchers then scaled those figures up to the whole country using national hospital admission numbers [@zacher2019].
+
+Germany treats each patient more safely than the European average, yet ends up ahead of Europe on every population measure (@tbl-compare).
+
+```{r}
+#| echo: false
+#| label: tbl-compare
+#| tbl-cap: "Germany ends up with more infections, more deaths and more lost health per head of population than the European average, despite treating each patient more safely. Figures are estimates for 2011, rounded. Source: Zacher et al. (2019)."
+comparison <- data.frame(
+  measure = c("Infections caught in hospital",
+              "Deaths caused by those infections",
+              "Years of healthy life lost"),
+  germany = c("592", "20", "308"),
+  europe  = c("468", "15", "290"),
+  diff    = c("27% more", "29% more", "6% more")
+)
+
+knitr::kable(comparison,
+             col.names = c("Per 100,000 people, each year", "Germany",
+                           "European average", "Germany's excess"),
+             align = "lccc")
+```
+
+The explanation is volume. Germany has more hospital beds than any other country in Europe, and admits more people than almost any other wealthy country. A small risk, spread across a very large number of admissions, adds up. That makes the number of unnecessary hospital stays an infection problem in its own right, not just a budget problem. It is also the first half of the answer to the question we started with: German hospitals are not doing worse per patient, they are simply treating far more patients.
+
+The second finding is about which infections deserve attention. The most common infection is not the most dangerous one, as @fig-risk shows.
+
+```{r}
+#| echo: false
+#| label: fig-risk
+#| fig-cap: "Bloodstream infections are the rarest of the five but kill roughly one patient in seven, while urinary tract infections are the most common and the least deadly. Calculated from estimated German cases and deaths in 2011. Source: Zacher et al. (2019)."
+#| fig-width: 7
+#| fig-height: 3
+#| fig-alt: "Bar chart of deaths per 100 infections for five hospital infections. Bloodstream infections are highest at 14.5, followed by C. difficile at 5.3, pneumonia at 3.7, surgical site at 2.5 and urinary tract at 1.7."
+risk <- data.frame(
+  infection = c("Bloodstream", "C. difficile", "Pneumonia",
+                "Surgical site", "Urinary tract"),
+  deaths_per_100 = c(14.5, 5.3, 3.7, 2.5, 1.7)
+)
+
+# deadliest at the top
+risk$infection <- factor(risk$infection, levels = rev(risk$infection))
+risk$focus <- risk$infection == "Bloodstream"
+
+ggplot(risk, aes(x = deaths_per_100, y = infection, fill = focus)) +
+  geom_col(width = 0.65) +
+  geom_text(aes(label = paste0(deaths_per_100, " deaths")), hjust = -0.15, size = 3.4) +
+  scale_fill_manual(values = c("TRUE" = "#9B2226", "FALSE" = "grey75"), guide = "none") +
+  scale_x_continuous(limits = c(0, 19), expand = c(0, 0)) +
+  labs(x = "Deaths per 100 infections", y = NULL) +
+  theme_minimal(base_size = 11) +
+  theme(panel.grid.major.y = element_blank(),
+        panel.grid.minor = element_blank())
+```
+
+Urinary tract infections account for nearly half of all cases, but they are rarely fatal on their own. Bloodstream infections are the rarest of the five, and they kill about one patient in seven. A prevention programme that chased the biggest case numbers would spend most of its effort on the least dangerous infection.
+
+One caution is worth keeping in mind. These are estimates built from a single day's snapshot, not a count of every infection, and the researchers are careful to say so. The gap between Germany and Europe in lost years of healthy life is small enough that it could, in principle, be no gap at all. The difference in infection rates is the part the evidence supports most strongly.
+
+## Why it matters
+
+The question this study started with was which hospital system handles infections best, and the honest answer is that it depends entirely on what you count. Measured per patient, Germany looks good. Measured per citizen, it does not. Neither number is wrong, and reading only one of them produces a confident conclusion in the wrong direction.
+
+The same trap is waiting in any statistic that comes with a denominator, whether it is crime per neighbourhood, accidents per driver or deaths per case. Before accepting a ranking, it is worth asking what sits underneath the line, and whether a different choice would reverse the order.
+
+For hospitals, the practical message is that infection control is not the only lever. Keeping people out of hospital when they do not need to be there protects them too, because the safest infection is the one that never had the chance to happen.
+
+## Reference
